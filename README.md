@@ -1,4 +1,4 @@
-#TOTP Connector for Mule 4
+# TOTP Connector for Mule 4
 Used to generate a time based, one time use token that is compatible with the Google Authenticator Application and similar applications.
 
 Useful for implementing a two-factor authentication scheme.
