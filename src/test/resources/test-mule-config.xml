@@ -1,0 +1,16 @@
+<mule xmlns="http://www.mulesoft.org/schema/mule/core"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:totp="http://www.mulesoft.org/schema/mule/totp"
+      xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+          http://www.mulesoft.org/schema/mule/totp http://www.mulesoft.org/schema/mule/totp/current/mule-totp.xsd">
+
+    <flow name="generateFlow">
+        <totp:generate key="abcd efgh ijkl mnop"/>
+    </flow>
+
+    <flow name="validateFlow">
+        <totp:generate key="abcd efgh ijkl mnop"/>
+        <totp:validate key="abcd efgh ijkl mnop" enabled="true" inbound_totp="#[payload]"/>
+    </flow>
+
+</mule>
