@@ -12,7 +12,9 @@ public class TotpErrorProvider implements ErrorTypeProvider {
 	@Override
 	public Set<ErrorTypeDefinition> getErrorTypes() {
         HashSet<ErrorTypeDefinition> errors = new HashSet<>();
-        errors.add(TotpErrors.TotpException);
+        errors.add(TotpErrors.EMPTY_KEY);
+        errors.add(TotpErrors.EMPTY_TOKEN);
+        errors.add(TotpErrors.INVALID_TOKEN);
         return errors;
 	}
 
