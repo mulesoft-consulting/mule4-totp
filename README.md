@@ -9,7 +9,7 @@ To use this connector, define this dependency:
 		<dependency>
 			<groupId>org.mule.consulting</groupId>
 			<artifactId>totp</artifactId>
-			<version>1.0.0</version>
+			<version>1.0.2</version>
 			<classifier>mule-plugin</classifier>
 		</dependency>
 ```
