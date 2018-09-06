@@ -17,7 +17,8 @@ To use this connector, define this dependency:
 Then use the **validate** operation in the flow where token validation is to be done. For example:
 
 ```
-
+		<totp:validate doc:name="Validate edit_token" key="'${totp.ping.put}"
+			inbound_totp="#[attributes.headers['${totp.property}']]" enabled="${totp.enabled}" />
 ```
 
 A totp token can be generated using the **generate** operation. The token will be returned in the payload.
